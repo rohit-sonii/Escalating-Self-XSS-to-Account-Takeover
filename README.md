@@ -5,7 +5,7 @@ The application used here uses oAuth functionality of Google as well as standard
 **Default/Hardcoded password is admin/admin**
 
 Please read my full blog here for better understanding:
-http://medium.com/rohit/asasas
+https://medium.com/@Ch3ckM4te/self-xss-to-account-takeover-72c89775cf8f
 
 Watch video POC here:
 https://www.youtube.com/watch?v=NzkcE6csK98
